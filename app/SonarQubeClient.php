@@ -12,15 +12,15 @@ class SonarQubeClient {
     $this->assignerPassword = $assignerPassword;
   }
   
-  public function getViolations($project, $depth, $priorities) {
-    $url = $this->buildGetViolationsUrl($project, $depth, $priorities);
-    echo "\ngetViolations($project,$depth,$priorities)\n";
+  public function getViolations($project, $depth, $severities) {
+    $url = $this->buildGetViolationsUrl($project, $depth, $severities);
+    echo "\ngetViolations($project,$depth,$severities)\n";
     echo $url;
     return json_decode($this->executeGet($url));
   }
   
-  public function buildGetViolationsUrl($project, $depth, $priorities) {
-    return "http://".$this->sonarHost."/api/violations?resource=".$project."&depth=".$depth."&priorities=".$priorities."&format=json";
+  public function buildGetViolationsUrl($project, $depth, $severities) {
+    return "http://".$this->sonarHost."/api/issues/search?componentRoots=".$project."&severities=".$severities;
   }  
   
   protected function executeGet($url)
