@@ -1,92 +1,372 @@
-[
-   {
-      "id":22962802,
-      "message":"The method getMarkupWhenLayer has 10 parameters. Consider to reduce parameter number under 10.",
-      "line":249,
-      "priority":"BLOCKER",
-      "createdAt":"2013-10-24T11:54:06+0200",
-      "rule":{
-         "key":"phppmd_rules:Code Size Rules/ExcessiveParameterList",
-         "name":"Method has too many parameters"
-      },
-      "resource":{
-         "key":"com.tomslabs.tools:sonar-review-creator:lib/helper/TomsLabsPager.class.php",
-         "name":"TomsLabsPager.class.php",
-         "scope":"FIL",
-         "qualifier":"FIL",
-         "language":"php"
-      }
+{
+   "maxResultsReached":false,
+   "paging":{
+      "pageIndex":1,
+      "pageSize":100,
+      "total":14,
+      "fTotal":"14",
+      "pages":1
    },
-   {
-      "id":22962731,
-      "message":"The method __toString() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 10.",
-      "line":35,
-      "priority":"CRITICAL",
-      "createdAt":"2012-09-18T08:42:05+0200",
-      "rule":{
-         "key":"phppmd_rules:Code Size Rules/CyclomaticComplexity",
-         "name":"Class cyclomatic complexity exceed maximum"
+   "issues":[
+      {
+         "key":"d7b571fd-51f7-4c3e-9ebe-e9ad582a8397",
+         "component":"com.purch.fe:community-comments-bundle:Controller/AlertController.php",
+         "componentId":24430,
+         "project":"com.purch.fe:community-comments-bundle",
+         "rule":"php:S1451",
+         "status":"OPEN",
+         "severity":"BLOCKER",
+         "message":"Add or update the header of this file.",
+         "debt":"5min",
+         "creationDate":"2015-05-20T09:16:49+0000",
+         "updateDate":"2015-05-20T09:16:49+0000",
+         "fUpdateAge":"a day"
       },
-      "resource":{
-         "key":"com.tomslabs.tools:sonar-review-creator:lib/ws/wsQuery.class.php",
-         "name":"wsQuery.class.php",
-         "scope":"FIL",
-         "qualifier":"FIL",
-         "language":"php"
-      }
-   },
-   {
-      "id":22962732,
-      "message":"The method __toString() has an NPath complexity of 1296. The configured NPath complexity threshold is 200.",
-      "line":35,
-      "priority":"CRITICAL",
-      "createdAt":"2012-09-18T08:42:05+0200",
-      "rule":{
-         "key":"phppmd_rules:Code Size Rules/NPathComplexity",
-         "name":"Class NPath Complexity exceeds maximum"
+      {
+         "key":"39e8caa4-3bca-4fce-b005-6dbc7086063f",
+         "component":"com.purch.fe:community-comments-bundle:Controller/CommentController.php",
+         "componentId":24431,
+         "project":"com.purch.fe:community-comments-bundle",
+         "rule":"php:S1451",
+         "status":"OPEN",
+         "severity":"BLOCKER",
+         "message":"Add or update the header of this file.",
+         "debt":"5min",
+         "creationDate":"2015-05-20T09:16:49+0000",
+         "updateDate":"2015-05-20T09:16:49+0000",
+         "fUpdateAge":"a day"
       },
-      "resource":{
-         "key":"com.tomslabs.tools:sonar-review-creator:lib/ws/wsQuery.class.php",
-         "name":"wsQuery.class.php",
-         "scope":"FIL",
-         "qualifier":"FIL",
-         "language":"php"
-      }
-   },
-   {
-      "id":22962753,
-      "message":"The method userHasDeletePermission() has an NPath complexity of 200. The configured NPath complexity threshold is 200.",
-      "line":113,
-      "priority":"CRITICAL",
-      "createdAt":"2013-03-15T16:41:56+0100",
-      "rule":{
-         "key":"phppmd_rules:Code Size Rules/NPathComplexity",
-         "name":"Class NPath Complexity exceeds maximum"
+      {
+         "key":"ff1bf40b-ad4d-47f8-a3f3-3343d957eea3",
+         "component":"com.purch.fe:community-comments-bundle:Controller/SecurityController.php",
+         "componentId":24432,
+         "project":"com.purch.fe:community-comments-bundle",
+         "rule":"php:S1451",
+         "status":"OPEN",
+         "severity":"BLOCKER",
+         "message":"Add or update the header of this file.",
+         "debt":"5min",
+         "creationDate":"2015-05-20T09:16:49+0000",
+         "updateDate":"2015-05-20T09:16:49+0000",
+         "fUpdateAge":"a day"
       },
-      "resource":{
-         "key":"com.tomslabs.tools:sonar-review-creator:lib/_usr/permissions/tomsLabsResponsePermissions.php",
-         "name":"tomsLabsResponsePermissions.php",
-         "scope":"FIL",
-         "qualifier":"FIL",
-         "language":"php"
-      }
-   },
-   {
-      "id":22962768,
-      "message":"The method getLinks() has an NPath complexity of 200. The configured NPath complexity threshold is 200.",
-      "line":32,
-      "priority":"CRITICAL",
-      "createdAt":"2013-08-28T16:55:48+0200",
-      "rule":{
-         "key":"phppmd_rules:Code Size Rules/NPathComplexity",
-         "name":"Class NPath Complexity exceeds maximum"
+      {
+         "key":"e063ef8b-0711-484c-9a90-a0d0c5597943",
+         "component":"com.purch.fe:community-comments-bundle:Lib/Processor/CommentParser.php",
+         "componentId":24456,
+         "project":"com.purch.fe:community-comments-bundle",
+         "rule":"php:S1451",
+         "status":"OPEN",
+         "severity":"BLOCKER",
+         "message":"Add or update the header of this file.",
+         "debt":"5min",
+         "creationDate":"2015-05-20T09:16:49+0000",
+         "updateDate":"2015-05-20T09:16:49+0000",
+         "fUpdateAge":"a day"
       },
-      "resource":{
-         "key":"com.tomslabs.tools:sonar-review-creator:lib/addon/seo/rLinksWS.class.php",
-         "name":"rLinksWS.class.php",
-         "scope":"FIL",
-         "qualifier":"FIL",
-         "language":"php"
+      {
+         "key":"03c54894-34ce-4ce2-adca-1e8816bb6bb2",
+         "component":"com.purch.fe:community-comments-bundle:Lib/Service/CommentClient.php",
+         "componentId":24459,
+         "project":"com.purch.fe:community-comments-bundle",
+         "rule":"php:S1451",
+         "status":"OPEN",
+         "severity":"BLOCKER",
+         "message":"Add or update the header of this file.",
+         "debt":"5min",
+         "creationDate":"2015-05-20T09:16:49+0000",
+         "updateDate":"2015-05-20T09:16:49+0000",
+         "fUpdateAge":"a day"
+      },
+      {
+         "key":"1a81db6c-5487-4223-a915-900ac6aee732",
+         "component":"com.purch.fe:community-comments-bundle:Lib/Service/CommentClient.php",
+         "componentId":24459,
+         "project":"com.purch.fe:community-comments-bundle",
+         "rule":"php:S1788",
+         "status":"OPEN",
+         "severity":"CRITICAL",
+         "message":"Move arguments \"$serviceConfig\" after arguments without default value",
+         "line":51,
+         "debt":"20min",
+         "creationDate":"2015-05-20T09:16:49+0000",
+         "updateDate":"2015-05-20T09:16:49+0000",
+         "fUpdateAge":"a day"
+      },
+      {
+         "key":"04e8bdfc-2c98-449d-a80e-a39fe459ceca",
+         "component":"com.purch.fe:community-comments-bundle:Security/User/WebserviceUser.php",
+         "componentId":24466,
+         "project":"com.purch.fe:community-comments-bundle",
+         "rule":"php:S1451",
+         "status":"OPEN",
+         "severity":"BLOCKER",
+         "message":"Add or update the header of this file.",
+         "debt":"5min",
+         "creationDate":"2015-05-20T09:16:49+0000",
+         "updateDate":"2015-05-20T09:16:49+0000",
+         "fUpdateAge":"a day"
+      },
+      {
+         "key":"b8078b1c-d2fd-48d9-8004-9bbb23625bad",
+         "component":"com.purch.fe:community-comments-bundle:User/CommentsPermissionsInterface.php",
+         "componentId":24481,
+         "project":"com.purch.fe:community-comments-bundle",
+         "rule":"php:S1451",
+         "status":"OPEN",
+         "severity":"BLOCKER",
+         "message":"Add or update the header of this file.",
+         "debt":"5min",
+         "creationDate":"2015-05-20T12:06:12+0000",
+         "updateDate":"2015-05-20T12:06:12+0000",
+         "fUpdateAge":"a day"
+      },
+      {
+         "key":"62224ee5-db4a-4d5c-83b6-2ea0a9e79a54",
+         "component":"com.purch.fe:community-comments-bundle:User/TomsUser.php",
+         "componentId":24482,
+         "project":"com.purch.fe:community-comments-bundle",
+         "rule":"php:S1451",
+         "status":"OPEN",
+         "severity":"BLOCKER",
+         "message":"Add or update the header of this file.",
+         "debt":"5min",
+         "creationDate":"2015-05-20T12:06:12+0000",
+         "updateDate":"2015-05-20T12:06:12+0000",
+         "fUpdateAge":"a day"
+      },
+      {
+         "key":"ced3d173-aee9-4139-81ce-b0c4935d3738",
+         "component":"com.purch.fe:community-comments-bundle:User/UserClient.php",
+         "componentId":24484,
+         "project":"com.purch.fe:community-comments-bundle",
+         "rule":"php:S1451",
+         "status":"OPEN",
+         "severity":"BLOCKER",
+         "message":"Add or update the header of this file.",
+         "debt":"5min",
+         "creationDate":"2015-05-20T12:06:12+0000",
+         "updateDate":"2015-05-20T12:06:12+0000",
+         "fUpdateAge":"a day"
+      },
+      {
+         "key":"7de73395-b8ed-4b76-abf6-f039ed647caf",
+         "component":"com.purch.fe:community-comments-bundle:User/UserClientService.php",
+         "componentId":24485,
+         "project":"com.purch.fe:community-comments-bundle",
+         "rule":"php:S1788",
+         "status":"OPEN",
+         "severity":"CRITICAL",
+         "message":"Move arguments \"$serviceConfig\" after arguments without default value",
+         "line":40,
+         "debt":"20min",
+         "creationDate":"2015-05-20T12:06:12+0000",
+         "updateDate":"2015-05-20T12:06:12+0000",
+         "fUpdateAge":"a day"
+      },
+      {
+         "key":"b17c31c5-4813-4c3d-9189-b08d0e569ad4",
+         "component":"com.purch.fe:community-comments-bundle:User/UserClientService.php",
+         "componentId":24485,
+         "project":"com.purch.fe:community-comments-bundle",
+         "rule":"php:S1451",
+         "status":"OPEN",
+         "severity":"BLOCKER",
+         "message":"Add or update the header of this file.",
+         "debt":"5min",
+         "creationDate":"2015-05-20T12:06:12+0000",
+         "updateDate":"2015-05-20T12:06:12+0000",
+         "fUpdateAge":"a day"
+      },
+      {
+         "key":"fcbbf69b-6883-4e07-891c-230e4baf69a9",
+         "component":"com.purch.fe:community-comments-bundle:User/UserPermissions.php",
+         "componentId":24486,
+         "project":"com.purch.fe:community-comments-bundle",
+         "rule":"php:S1451",
+         "status":"OPEN",
+         "severity":"BLOCKER",
+         "message":"Add or update the header of this file.",
+         "debt":"5min",
+         "creationDate":"2015-05-20T12:06:12+0000",
+         "updateDate":"2015-05-20T12:06:12+0000",
+         "fUpdateAge":"a day"
+      },
+      {
+         "key":"24ad4194-92f5-4039-b26b-1caad8c5368a",
+         "component":"com.purch.fe:community-comments-bundle:karma.conf.js",
+         "componentId":24487,
+         "project":"com.purch.fe:community-comments-bundle",
+         "rule":"javascript:TrailingComma",
+         "status":"OPEN",
+         "severity":"BLOCKER",
+         "message":"Avoid trailing comma in array and object literals.",
+         "line":71,
+         "debt":"10min",
+         "creationDate":"2015-05-20T12:06:12+0000",
+         "updateDate":"2015-05-20T12:06:12+0000",
+         "fUpdateAge":"a day"
       }
-   }
-]
+   ],
+   "components":[
+      {
+         "key":"com.purch.fe:community-comments-bundle:User/UserClient.php",
+         "id":24484,
+         "qualifier":"FIL",
+         "name":"UserClient.php",
+         "longName":"User/UserClient.php",
+         "path":"User/UserClient.php",
+         "projectId":24428,
+         "subProjectId":24428
+      },
+      {
+         "key":"com.purch.fe:community-comments-bundle:User/UserPermissions.php",
+         "id":24486,
+         "qualifier":"FIL",
+         "name":"UserPermissions.php",
+         "longName":"User/UserPermissions.php",
+         "path":"User/UserPermissions.php",
+         "projectId":24428,
+         "subProjectId":24428
+      },
+      {
+         "key":"com.purch.fe:community-comments-bundle",
+         "id":24428,
+         "qualifier":"TRK",
+         "name":"community-comments-bundle",
+         "longName":"community-comments-bundle"
+      },
+      {
+         "key":"com.purch.fe:community-comments-bundle:User/UserClientService.php",
+         "id":24485,
+         "qualifier":"FIL",
+         "name":"UserClientService.php",
+         "longName":"User/UserClientService.php",
+         "path":"User/UserClientService.php",
+         "projectId":24428,
+         "subProjectId":24428
+      },
+      {
+         "key":"com.purch.fe:community-comments-bundle:Lib/Service/CommentClient.php",
+         "id":24459,
+         "qualifier":"FIL",
+         "name":"CommentClient.php",
+         "longName":"Lib/Service/CommentClient.php",
+         "path":"Lib/Service/CommentClient.php",
+         "projectId":24428,
+         "subProjectId":24428
+      },
+      {
+         "key":"com.purch.fe:community-comments-bundle:Controller/CommentController.php",
+         "id":24431,
+         "qualifier":"FIL",
+         "name":"CommentController.php",
+         "longName":"Controller/CommentController.php",
+         "path":"Controller/CommentController.php",
+         "projectId":24428,
+         "subProjectId":24428
+      },
+      {
+         "key":"com.purch.fe:community-comments-bundle:User/CommentsPermissionsInterface.php",
+         "id":24481,
+         "qualifier":"FIL",
+         "name":"CommentsPermissionsInterface.php",
+         "longName":"User/CommentsPermissionsInterface.php",
+         "path":"User/CommentsPermissionsInterface.php",
+         "projectId":24428,
+         "subProjectId":24428
+      },
+      {
+         "key":"com.purch.fe:community-comments-bundle:Lib/Processor/CommentParser.php",
+         "id":24456,
+         "qualifier":"FIL",
+         "name":"CommentParser.php",
+         "longName":"Lib/Processor/CommentParser.php",
+         "path":"Lib/Processor/CommentParser.php",
+         "projectId":24428,
+         "subProjectId":24428
+      },
+      {
+         "key":"com.purch.fe:community-comments-bundle:Controller/SecurityController.php",
+         "id":24432,
+         "qualifier":"FIL",
+         "name":"SecurityController.php",
+         "longName":"Controller/SecurityController.php",
+         "path":"Controller/SecurityController.php",
+         "projectId":24428,
+         "subProjectId":24428
+      },
+      {
+         "key":"com.purch.fe:community-comments-bundle:User/TomsUser.php",
+         "id":24482,
+         "qualifier":"FIL",
+         "name":"TomsUser.php",
+         "longName":"User/TomsUser.php",
+         "path":"User/TomsUser.php",
+         "projectId":24428,
+         "subProjectId":24428
+      },
+      {
+         "key":"com.purch.fe:community-comments-bundle:karma.conf.js",
+         "id":24487,
+         "qualifier":"FIL",
+         "name":"karma.conf.js",
+         "longName":"karma.conf.js",
+         "path":"karma.conf.js",
+         "projectId":24428,
+         "subProjectId":24428
+      },
+      {
+         "key":"com.purch.fe:community-comments-bundle:Controller/AlertController.php",
+         "id":24430,
+         "qualifier":"FIL",
+         "name":"AlertController.php",
+         "longName":"Controller/AlertController.php",
+         "path":"Controller/AlertController.php",
+         "projectId":24428,
+         "subProjectId":24428
+      },
+      {
+         "key":"com.purch.fe:community-comments-bundle:Security/User/WebserviceUser.php",
+         "id":24466,
+         "qualifier":"FIL",
+         "name":"WebserviceUser.php",
+         "longName":"Security/User/WebserviceUser.php",
+         "path":"Security/User/WebserviceUser.php",
+         "projectId":24428,
+         "subProjectId":24428
+      }
+   ],
+   "projects":[
+      {
+         "key":"com.purch.fe:community-comments-bundle",
+         "id":24428,
+         "qualifier":"TRK",
+         "name":"community-comments-bundle",
+         "longName":"community-comments-bundle"
+      }
+   ],
+   "rules":[
+      {
+         "key":"javascript:TrailingComma",
+         "name":"Trailing commas should not be used",
+         "desc":"<p>\n  Most browsers parse and discard a meaningless, trailing comma. Unfortunately, that's not the case for Internet Explorer, which in most versions throws a meaningless error. Therefore trailing commas should be eliminated.\n</p>\n\n<h2>Noncompliant Code Example</h2>\n\n<pre>\nvar settings = {\n    'foo'  : oof,\n    'bar' : rab,    // Noncompliant - trailing comma\n};\n</pre>\n\n<h2>Compliant Solution</h2>\n<pre>\nvar settings = {\n    'foo'  : oof,\n    'bar' : rab\n};\n</pre>",
+         "status":"READY"
+      },
+      {
+         "key":"php:S1451",
+         "name":"Copyright and license headers should be defined",
+         "desc":"<p>\nEach source file should start with a header comment stating file ownership and the license which must be used to distribute the application.</br>\nThis rule must be fed with the header comment that is expected at the beginning of every file. This expected header comment should not contain any <code>&lt;?php</code> and <code>?&gt;</code> tags.\n</p>\n\n<p>For example, for SonarSource's open source softwares, the <code>headerFormat</code> property must be set to:</p>\n<pre>\n/*\n * SonarQube, open source software quality management tool.\n * Copyright (C) 2008-2013 SonarSource\n * mailto:contact AT sonarsource DOT com\n *\n * SonarQube is free software; you can redistribute it and/or\n * modify it under the terms of the GNU Lesser General Public\n * License as published by the Free Software Foundation; either\n * version 3 of the License, or (at your option) any later version.\n *\n * SonarQube is distributed in the hope that it will be useful,\n * but WITHOUT ANY WARRANTY; without even the implied warranty of\n * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU\n * Lesser General Public License for more details.\n *\n * You should have received a copy of the GNU Lesser General Public License\n * along with this program; if not, write to the Free Software Foundation,\n * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.\n */\n</pre>",
+         "status":"READY"
+      },
+      {
+         "key":"php:S1788",
+         "name":"Method arguments with default value should be last",
+         "desc":"<p>\nPHP is one of this powerful language allowing to define a default value for a method argument. But all method arguments with a default value should be declared after the method arguments without default value.\n</p>\n\n<h2>Noncompliant Code Example</h2>\n<p>In the following case, calling makeyogurt(\"raspberry\") won't lead to the expected result :</p>\n<pre>\nfunction makeyogurt($type = \"acidophilus\", $flavour){...}\n</pre>\n<p>The following warning will be generated at runtime: <code>Missing argument 2 in call to makeyogurt()</code></p>\n\n<h2>Compliant Solution</h2>\n<pre>\nfunction makeyogurt($flavour, $type = \"acidophilus\", ){...}\n</pre>",
+         "status":"READY"
+      }
+   ],
+   "users":[
+
+   ]
+}

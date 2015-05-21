@@ -35,6 +35,12 @@ class SonarReviewCreatorTest extends PHPUnit_Framework_TestCase {
   }
   
   /** @test */
+  public function countNbViolations() {
+    $violations = json_decode($this->projectViolationsJson, true);
+    assertThat($violations["paging"]["total"], equalTo(14));
+  }
+
+  /** @test */
   public function retrieveViolationsCreatedAfterTheGivenDate() {
     $violations = json_decode($this->projectViolationsJson);
     $createdAfterLimitDate = new DateTime('2013-10-24', new DateTimeZone('UTC'));

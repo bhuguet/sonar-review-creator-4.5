@@ -42,7 +42,7 @@ class SonarReviewCreator {
     echo "\nRunning SonarReviewCreator for project " . $this->project . ". Scanning $this->nbDaysBackward days back..\n";
 
     $violations = $this->sonarQubeClient->getViolations($this->project, $this->depth, $this->priorities);
-    $nbViolations = count($violations);
+    $nbViolations = $violations["paging"]["total"];
     echo "\n\nFound $nbViolations eligible violations for review creation..\n";
     if ($nbViolations == 0) {
       exit(1);
