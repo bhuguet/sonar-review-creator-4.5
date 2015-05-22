@@ -10,9 +10,9 @@
    "issues":[
       {
          "key":"d7b571fd-51f7-4c3e-9ebe-e9ad582a8397",
-         "component":"com.purch.fe:community-comments-bundle:Controller/AlertController.php",
+         "component":"com.tomslabs.tools:sonar-review-creator:Controller/AlertController.php",
          "componentId":24430,
-         "project":"com.purch.fe:community-comments-bundle",
+         "project":"com.tomslabs.tools:sonar-review-creator",
          "rule":"php:S1451",
          "status":"OPEN",
          "severity":"BLOCKER",
@@ -24,9 +24,9 @@
       },
       {
          "key":"39e8caa4-3bca-4fce-b005-6dbc7086063f",
-         "component":"com.purch.fe:community-comments-bundle:Controller/CommentController.php",
+         "component":"com.tomslabs.tools:sonar-review-creator:Controller/CommentController.php",
          "componentId":24431,
-         "project":"com.purch.fe:community-comments-bundle",
+         "project":"com.tomslabs.tools:sonar-review-creator",
          "rule":"php:S1451",
          "status":"OPEN",
          "severity":"BLOCKER",
@@ -38,9 +38,9 @@
       },
       {
          "key":"ff1bf40b-ad4d-47f8-a3f3-3343d957eea3",
-         "component":"com.purch.fe:community-comments-bundle:Controller/SecurityController.php",
+         "component":"com.tomslabs.tools:sonar-review-creator:Controller/SecurityController.php",
          "componentId":24432,
-         "project":"com.purch.fe:community-comments-bundle",
+         "project":"com.tomslabs.tools:sonar-review-creator",
          "rule":"php:S1451",
          "status":"OPEN",
          "severity":"BLOCKER",
@@ -52,9 +52,9 @@
       },
       {
          "key":"e063ef8b-0711-484c-9a90-a0d0c5597943",
-         "component":"com.purch.fe:community-comments-bundle:Lib/Processor/CommentParser.php",
+         "component":"com.tomslabs.tools:sonar-review-creator:Lib/Processor/CommentParser.php",
          "componentId":24456,
-         "project":"com.purch.fe:community-comments-bundle",
+         "project":"com.tomslabs.tools:sonar-review-creator",
          "rule":"php:S1451",
          "status":"OPEN",
          "severity":"BLOCKER",
@@ -66,9 +66,9 @@
       },
       {
          "key":"03c54894-34ce-4ce2-adca-1e8816bb6bb2",
-         "component":"com.purch.fe:community-comments-bundle:Lib/Service/CommentClient.php",
+         "component":"com.tomslabs.tools:sonar-review-creator:Lib/Service/CommentClient.php",
          "componentId":24459,
-         "project":"com.purch.fe:community-comments-bundle",
+         "project":"com.tomslabs.tools:sonar-review-creator",
          "rule":"php:S1451",
          "status":"OPEN",
          "severity":"BLOCKER",
@@ -80,9 +80,9 @@
       },
       {
          "key":"1a81db6c-5487-4223-a915-900ac6aee732",
-         "component":"com.purch.fe:community-comments-bundle:Lib/Service/CommentClient.php",
+         "component":"com.tomslabs.tools:sonar-review-creator:Lib/Service/CommentClient.php",
          "componentId":24459,
-         "project":"com.purch.fe:community-comments-bundle",
+         "project":"com.tomslabs.tools:sonar-review-creator",
          "rule":"php:S1788",
          "status":"OPEN",
          "severity":"CRITICAL",
@@ -95,9 +95,9 @@
       },
       {
          "key":"04e8bdfc-2c98-449d-a80e-a39fe459ceca",
-         "component":"com.purch.fe:community-comments-bundle:Security/User/WebserviceUser.php",
+         "component":"com.tomslabs.tools:sonar-review-creator:Security/User/WebserviceUser.php",
          "componentId":24466,
-         "project":"com.purch.fe:community-comments-bundle",
+         "project":"com.tomslabs.tools:sonar-review-creator",
          "rule":"php:S1451",
          "status":"OPEN",
          "severity":"BLOCKER",
@@ -109,9 +109,9 @@
       },
       {
          "key":"b8078b1c-d2fd-48d9-8004-9bbb23625bad",
-         "component":"com.purch.fe:community-comments-bundle:User/CommentsPermissionsInterface.php",
+         "component":"com.tomslabs.tools:sonar-review-creator:User/CommentsPermissionsInterface.php",
          "componentId":24481,
-         "project":"com.purch.fe:community-comments-bundle",
+         "project":"com.tomslabs.tools:sonar-review-creator",
          "rule":"php:S1451",
          "status":"OPEN",
          "severity":"BLOCKER",
@@ -123,9 +123,9 @@
       },
       {
          "key":"62224ee5-db4a-4d5c-83b6-2ea0a9e79a54",
-         "component":"com.purch.fe:community-comments-bundle:User/TomsUser.php",
+         "component":"com.tomslabs.tools:sonar-review-creator:User/TomsUser.php",
          "componentId":24482,
-         "project":"com.purch.fe:community-comments-bundle",
+         "project":"com.tomslabs.tools:sonar-review-creator",
          "rule":"php:S1451",
          "status":"OPEN",
          "severity":"BLOCKER",
@@ -137,9 +137,9 @@
       },
       {
          "key":"ced3d173-aee9-4139-81ce-b0c4935d3738",
-         "component":"com.purch.fe:community-comments-bundle:User/UserClient.php",
+         "component":"com.tomslabs.tools:sonar-review-creator:User/UserClient.php",
          "componentId":24484,
-         "project":"com.purch.fe:community-comments-bundle",
+         "project":"com.tomslabs.tools:sonar-review-creator",
          "rule":"php:S1451",
          "status":"OPEN",
          "severity":"BLOCKER",
@@ -151,9 +151,9 @@
       },
       {
          "key":"7de73395-b8ed-4b76-abf6-f039ed647caf",
-         "component":"com.purch.fe:community-comments-bundle:User/UserClientService.php",
+         "component":"com.tomslabs.tools:sonar-review-creator:User/UserClientService.php",
          "componentId":24485,
-         "project":"com.purch.fe:community-comments-bundle",
+         "project":"com.tomslabs.tools:sonar-review-creator",
          "rule":"php:S1788",
          "status":"OPEN",
          "severity":"CRITICAL",
@@ -166,9 +166,9 @@
       },
       {
          "key":"b17c31c5-4813-4c3d-9189-b08d0e569ad4",
-         "component":"com.purch.fe:community-comments-bundle:User/UserClientService.php",
+         "component":"com.tomslabs.tools:sonar-review-creator:User/UserClientService.php",
          "componentId":24485,
-         "project":"com.purch.fe:community-comments-bundle",
+         "project":"com.tomslabs.tools:sonar-review-creator",
          "rule":"php:S1451",
          "status":"OPEN",
          "severity":"BLOCKER",
@@ -180,9 +180,9 @@
       },
       {
          "key":"fcbbf69b-6883-4e07-891c-230e4baf69a9",
-         "component":"com.purch.fe:community-comments-bundle:User/UserPermissions.php",
+         "component":"com.tomslabs.tools:sonar-review-creator:User/UserPermissions.php",
          "componentId":24486,
-         "project":"com.purch.fe:community-comments-bundle",
+         "project":"com.tomslabs.tools:sonar-review-creator",
          "rule":"php:S1451",
          "status":"OPEN",
          "severity":"BLOCKER",
@@ -194,9 +194,9 @@
       },
       {
          "key":"24ad4194-92f5-4039-b26b-1caad8c5368a",
-         "component":"com.purch.fe:community-comments-bundle:karma.conf.js",
+         "component":"com.tomslabs.tools:sonar-review-creator:karma.conf.js",
          "componentId":24487,
-         "project":"com.purch.fe:community-comments-bundle",
+         "project":"com.tomslabs.tools:sonar-review-creator",
          "rule":"javascript:TrailingComma",
          "status":"OPEN",
          "severity":"BLOCKER",
@@ -210,7 +210,7 @@
    ],
    "components":[
       {
-         "key":"com.purch.fe:community-comments-bundle:User/UserClient.php",
+         "key":"com.tomslabs.tools:sonar-review-creator:User/UserClient.php",
          "id":24484,
          "qualifier":"FIL",
          "name":"UserClient.php",
@@ -220,7 +220,7 @@
          "subProjectId":24428
       },
       {
-         "key":"com.purch.fe:community-comments-bundle:User/UserPermissions.php",
+         "key":"com.tomslabs.tools:sonar-review-creator:User/UserPermissions.php",
          "id":24486,
          "qualifier":"FIL",
          "name":"UserPermissions.php",
@@ -230,14 +230,14 @@
          "subProjectId":24428
       },
       {
-         "key":"com.purch.fe:community-comments-bundle",
+         "key":"com.tomslabs.tools:sonar-review-creator",
          "id":24428,
          "qualifier":"TRK",
-         "name":"community-comments-bundle",
-         "longName":"community-comments-bundle"
+         "name":"sonar-review-creator",
+         "longName":"sonar-review-creator"
       },
       {
-         "key":"com.purch.fe:community-comments-bundle:User/UserClientService.php",
+         "key":"com.tomslabs.tools:sonar-review-creator:User/UserClientService.php",
          "id":24485,
          "qualifier":"FIL",
          "name":"UserClientService.php",
@@ -247,7 +247,7 @@
          "subProjectId":24428
       },
       {
-         "key":"com.purch.fe:community-comments-bundle:Lib/Service/CommentClient.php",
+         "key":"com.tomslabs.tools:sonar-review-creator:Lib/Service/CommentClient.php",
          "id":24459,
          "qualifier":"FIL",
          "name":"CommentClient.php",
@@ -257,7 +257,7 @@
          "subProjectId":24428
       },
       {
-         "key":"com.purch.fe:community-comments-bundle:Controller/CommentController.php",
+         "key":"com.tomslabs.tools:sonar-review-creator:Controller/CommentController.php",
          "id":24431,
          "qualifier":"FIL",
          "name":"CommentController.php",
@@ -267,7 +267,7 @@
          "subProjectId":24428
       },
       {
-         "key":"com.purch.fe:community-comments-bundle:User/CommentsPermissionsInterface.php",
+         "key":"com.tomslabs.tools:sonar-review-creator:User/CommentsPermissionsInterface.php",
          "id":24481,
          "qualifier":"FIL",
          "name":"CommentsPermissionsInterface.php",
@@ -277,7 +277,7 @@
          "subProjectId":24428
       },
       {
-         "key":"com.purch.fe:community-comments-bundle:Lib/Processor/CommentParser.php",
+         "key":"com.tomslabs.tools:sonar-review-creator:Lib/Processor/CommentParser.php",
          "id":24456,
          "qualifier":"FIL",
          "name":"CommentParser.php",
@@ -287,7 +287,7 @@
          "subProjectId":24428
       },
       {
-         "key":"com.purch.fe:community-comments-bundle:Controller/SecurityController.php",
+         "key":"com.tomslabs.tools:sonar-review-creator:Controller/SecurityController.php",
          "id":24432,
          "qualifier":"FIL",
          "name":"SecurityController.php",
@@ -297,7 +297,7 @@
          "subProjectId":24428
       },
       {
-         "key":"com.purch.fe:community-comments-bundle:User/TomsUser.php",
+         "key":"com.tomslabs.tools:sonar-review-creator:User/TomsUser.php",
          "id":24482,
          "qualifier":"FIL",
          "name":"TomsUser.php",
@@ -307,7 +307,7 @@
          "subProjectId":24428
       },
       {
-         "key":"com.purch.fe:community-comments-bundle:karma.conf.js",
+         "key":"com.tomslabs.tools:sonar-review-creator:karma.conf.js",
          "id":24487,
          "qualifier":"FIL",
          "name":"karma.conf.js",
@@ -317,7 +317,7 @@
          "subProjectId":24428
       },
       {
-         "key":"com.purch.fe:community-comments-bundle:Controller/AlertController.php",
+         "key":"com.tomslabs.tools:sonar-review-creator:Controller/AlertController.php",
          "id":24430,
          "qualifier":"FIL",
          "name":"AlertController.php",
@@ -327,7 +327,7 @@
          "subProjectId":24428
       },
       {
-         "key":"com.purch.fe:community-comments-bundle:Security/User/WebserviceUser.php",
+         "key":"com.tomslabs.tools:sonar-review-creator:Security/User/WebserviceUser.php",
          "id":24466,
          "qualifier":"FIL",
          "name":"WebserviceUser.php",
@@ -339,11 +339,11 @@
    ],
    "projects":[
       {
-         "key":"com.purch.fe:community-comments-bundle",
+         "key":"com.tomslabs.tools:sonar-review-creator",
          "id":24428,
          "qualifier":"TRK",
-         "name":"community-comments-bundle",
-         "longName":"community-comments-bundle"
+         "name":"sonar-review-creator",
+         "longName":"sonar-review-creator"
       }
    ],
    "rules":[

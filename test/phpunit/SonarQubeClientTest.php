@@ -5,7 +5,8 @@ class SonarQubeClientTest extends PHPUnit_Framework_TestCase {
   private $sonarHost = 'sonar.mycompany.com';
   private $assignerUsername = 'sonaradmin';
   private $assignerPassword = 'password';
-  
+  private $defaultAssignee = 'wilson';
+
   private $sonarQubeClient;
   private $project = 'com.tomslabs.tools:sonar-review-creator';
   private $severities = 'BLOCKER,CRITICAL,MAJOR';
@@ -44,16 +45,32 @@ class SonarQubeClientTest extends PHPUnit_Framework_TestCase {
     
     assertThat($violations["paging"]["total"], equalTo(14));
     assertThat($violationLineNumber, equalTo(71));
-    assertThat($violatedFile, equalTo("com.purch.fe:community-comments-bundle:karma.conf.js"));
+    assertThat($violatedFile, equalTo("com.tomslabs.tools:sonar-review-creator:karma.conf.js"));
     assertThat($violatedFullFilePath, equalTo("karma.conf.js"));
   }  
   
   private function mockSonarQubeClient() {
-    $sonarQubeClient = $this->getMock('SonarQubeClient', array('getViolations'), array($this->project, $this->depth, $this->severities), '', true);
-    $sonarQubeClient->expects($this->once())
+    $sonarQubeClient = $this->getMock('SonarQubeClient', array('getViolations'), array($this->sonarHost, $this->assignerUsername, $this->assignerPassword), '', true);
+    $sonarQubeClient->expects($this->any())
                     ->method('getViolations')
                     ->will($this->returnValue(json_decode($this->projectViolationsJson, true)));    
     return $sonarQubeClient;
   }
   
+  /** @test */
+  public function buildCreateReviewUrl() {
+    $sonarQubeClient = $this->mockSonarQubeClient();
+
+  	$violationId = '24ad4194-92f5-4039-b26b-1caad8c5368a';
+  	$url = $sonarQubeClient->buildCreateReviewUrl($violationId, $this->defaultAssignee);
+  	assertThat($url, equalTo('http://sonar.mycompany.com/api/issues/assign?issue='.$violationId.'&assignee='.$this->defaultAssignee));
+  }
+
+  /** @ignore */
+  public function executeCreateReviewForReal() {
+	$sonarQubeClient = new SonarQubeClient('sonar.host.com:9000', 'assigneruser', 'assignerpassword');  	
+	$violationId = '24ad4194-92f5-4039-b26b-1caad8c5368a';
+	$sonarQubeClient->executeCreateReview($violationId, $this->defaultAssignee);
+  }
+
 }

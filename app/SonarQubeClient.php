@@ -44,30 +44,15 @@ class SonarQubeClient {
   }   
   
   public function executeCreateReview($violationId, $assignee) {
-    //curl -u admin:admin -d "violation_id=123&status=OPEN&comment=myComment&assignee=admin" -X POST http://localhost:9000/api/reviews
-    $url = 'http://' . $this->sonarHost . '/api/reviews';
-    $fields = array(
-                'violation_id' => $violationId,
-                'status' => 'OPEN',
-//                'comment' => 'Consider that the next person who will read your code is a psychopath and he knows your home address !',
-                'comment' => 'please fix me',
-                'assignee' => $assignee
-            );
-
-    $fields_string = '';
-    //url-ify the data for the POST
-    foreach($fields as $key=>$value) { 
-      $fields_string .= $key.'='.$value.'&';
-    }
-    rtrim($fields_string, '&');
+    $url = $this->buildCreateReviewUrl($violationId, $assignee);
 
     //open connection
     $ch = curl_init();
 
     //set the url, number of POST vars, POST data
     curl_setopt($ch,CURLOPT_URL, $url);
-    curl_setopt($ch,CURLOPT_POST, count($fields));
-    curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
+    curl_setopt($ch,CURLOPT_POST, count(array()));
+    curl_setopt($ch,CURLOPT_POSTFIELDS, '');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_USERPWD, $this->assignerUsername . ':' . $this->assignerPassword);
     curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
@@ -78,6 +63,10 @@ class SonarQubeClient {
 
     //close connection
     curl_close($ch);    
+  }
+
+  public function buildCreateReviewUrl($violationId, $assignee) {
+    return 'http://' . $this->sonarHost . '/api/issues/assign?issue='.$violationId.'&assignee='.$assignee;
   }
   
 }
