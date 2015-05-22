@@ -12,14 +12,14 @@ class SonarQubeClient {
     $this->assignerPassword = $assignerPassword;
   }
   
-  public function getViolations($project, $depth, $severities) {
-    $url = $this->buildGetViolationsUrl($project, $depth, $severities);
-    echo "\ngetViolations($project,$depth,$severities)\n";
+  public function getViolations($project, $severities) {
+    $url = $this->buildGetViolationsUrl($project, $severities);
+    echo "\ngetViolations($project, $severities)\n";
     echo $url;
     return json_decode($this->executeGet($url));
   }
   
-  public function buildGetViolationsUrl($project, $depth, $severities) {
+  public function buildGetViolationsUrl($project, $severities) {
     return "http://".$this->sonarHost."/api/issues/search?componentRoots=".$project."&severities=".$severities;
   }  
   

@@ -10,7 +10,6 @@ class SonarQubeClientTest extends PHPUnit_Framework_TestCase {
   private $sonarQubeClient;
   private $project = 'com.tomslabs.tools:sonar-review-creator';
   private $severities = 'BLOCKER,CRITICAL,MAJOR';
-  private $depth = '-1';
   
   private $projectViolationsJson;
   
@@ -26,14 +25,14 @@ class SonarQubeClientTest extends PHPUnit_Framework_TestCase {
   
   /** @test */
   public function buildGetViolationsUrl() {
-    assertThat($this->sonarQubeClient->buildGetViolationsUrl($this->project, $this->depth, $this->severities), 
+    assertThat($this->sonarQubeClient->buildGetViolationsUrl($this->project, $this->severities), 
       equalTo("http://sonar.mycompany.com/api/issues/search?componentRoots=com.tomslabs.tools:sonar-review-creator&severities=BLOCKER,CRITICAL,MAJOR"));
   }  
   
   /** @test */
   public function readFirstViolationFromStubResponse() {
     $sonarQubeClient = $this->mockSonarQubeClient();
-    $violations = $sonarQubeClient->getViolations($this->project, $this->depth, $this->severities);
+    $violations = $sonarQubeClient->getViolations($this->project, $this->severities);
     
     $firstViolation = $violations['issues'][13];
     

@@ -10,7 +10,6 @@ class SonarReviewCreator {
   private $priorities;
   private $nbDaysBackward;
   private $vcs;
-  private $depth = -1;
   
   private $sonarQubeClient;
   
@@ -41,7 +40,7 @@ class SonarReviewCreator {
   public function run() {
     echo "\nRunning SonarReviewCreator for project " . $this->project . ". Scanning $this->nbDaysBackward days back..\n";
 
-    $violations = $this->sonarQubeClient->getViolations($this->project, $this->depth, $this->priorities);
+    $violations = $this->sonarQubeClient->getViolations($this->project, $this->priorities);
     $nbViolations = $violations["paging"]["total"];
     echo "\n\nFound $nbViolations eligible violations for review creation..\n";
     if ($nbViolations == 0) {
