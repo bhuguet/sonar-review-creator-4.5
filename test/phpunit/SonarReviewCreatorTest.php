@@ -42,12 +42,14 @@ class SonarReviewCreatorTest extends PHPUnit_Framework_TestCase {
 
   /** @test */
   public function retrieveViolationsCreatedAfterTheGivenDate() {
-    $violations = json_decode($this->projectViolationsJson);
-    $createdAfterLimitDate = new DateTime('2013-10-24', new DateTimeZone('UTC'));
+    $projectViolations = json_decode($this->projectViolationsJson, true);
+    $createdAfterLimitDate = new DateTime('2015-05-21', new DateTimeZone('UTC'));
     
+    $violations = $projectViolations['issues'];
+
     $violationsCreatedAfter = array();
     foreach ($violations as $violation) {
-      if ($this->sonarReviewCreator->violationWasCreatedAfterTheGivenDate($createdAfterLimitDate, $violation->createdAt)) {
+      if ($this->sonarReviewCreator->violationWasCreatedAfterTheGivenDate($createdAfterLimitDate, $violation['creationDate'])) {
         array_push($violationsCreatedAfter, $violation);
       }
     }
