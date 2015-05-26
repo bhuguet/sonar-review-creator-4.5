@@ -44,9 +44,9 @@ class SonarViolationTest extends PHPUnit_Framework_TestCase {
     $violation = $this->newJavaStdClassViolation();
     $sonarViolation = new SonarViolation($this->sonarQubeClient, $violation);
 
-    assertThat($this->sonarViolation->getId(), equalTo($violation->key));
-    assertThat($this->sonarViolation->getLineNumber(), equalTo($violation->line));
-    assertThat($this->sonarViolation->getFileFullKey(), equalTo($violation->component));
+    assertThat($sonarViolation->getId(), equalTo($violation->key));
+    assertThat($sonarViolation->getLineNumber(), equalTo($violation->line));
+    assertThat($sonarViolation->getFileFullKey(), equalTo($violation->component));
   }
 
   private function newJavaStdClassViolation() {
