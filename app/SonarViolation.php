@@ -2,6 +2,8 @@
 
 class SonarViolation {
   
+  const MISSING_LINE_NUMBER_VALUE = 1;
+
   private $id;
   private $lineNumber;
   private $fileFullKey;
@@ -16,8 +18,8 @@ class SonarViolation {
     $this->sonarQubeClient = $sonarQubeClient;
     
     $this->id = $violation->key;
-    $this->lineNumber = $violation->line;
     $this->fileFullKey = $violation->component;    
+    $this->lineNumber = isset($violation->line) ? $violation->line : self::MISSING_LINE_NUMBER_VALUE;
     
     $this->ldapUserAliasesMatcher = new LdapUserAliasesMatcher();
   }

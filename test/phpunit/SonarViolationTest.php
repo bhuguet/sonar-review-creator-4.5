@@ -70,6 +70,34 @@ class SonarViolationTest extends PHPUnit_Framework_TestCase {
   }
 
   /** @test */
+  public function return1WhenLineNumberIsMissing() {
+    $violation = $this->newPhpStdClassViolationWithoutLineNumber();
+    $sonarViolation = new SonarViolation($this->sonarQubeClient, $violation);
+
+    assertThat($sonarViolation->getId(), equalTo($violation->key));
+    assertThat($sonarViolation->getLineNumber(), equalTo(1));
+    assertThat($sonarViolation->getFileFullKey(), equalTo($violation->component));
+  }
+
+  private function newPhpStdClassViolationWithoutLineNumber() {
+    $violation = (object) array(
+         "key" => "d7b571fd-51f7-4c3e-9ebe-e9ad582a8397",
+         "component" => "com.tomslabs.tools:sonar-review-creator:Controller/AlertController.php",
+         "componentId" => 24430,
+         "project" => "com.tomslabs.tools:sonar-review-creator",
+         "rule" => "php:S1451",
+         "status" => "OPEN",
+         "severity" => "BLOCKER",
+         "message" => "Add or update the header of this file.",
+         "debt" => "5min",
+         "creationDate" => "2015-05-20T09:16:49+0000",
+         "updateDate" => "2015-05-20T09:16:49+0000",
+         "fUpdateAge" => "a day"
+      );
+      return $violation;
+  }
+
+  /** @test */
   public function findPathToPhpViolatedFile() {
     $sourceDirectory = "/home/tomslabs/workspace/sonar-review-creator/app";
     $sonarViolation = $this->getMock('SonarViolation', array('find', 'changeToDirectory'), array(), '', false);
