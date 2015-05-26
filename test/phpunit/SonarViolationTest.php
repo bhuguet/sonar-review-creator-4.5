@@ -13,7 +13,7 @@ class SonarViolationTest extends PHPUnit_Framework_TestCase {
   }
   
   /** @test */
-  public function sonarViolationAttributes() {
+  public function phpSonarViolationAttributes() {
     $violation = $this->phpStdClassViolation;
     assertThat($this->sonarViolation->getId(), equalTo($violation->key));
     assertThat($this->sonarViolation->getLineNumber(), equalTo($violation->line));
@@ -39,28 +39,33 @@ class SonarViolationTest extends PHPUnit_Framework_TestCase {
     return $violation;
   }
 
+  /** @test */
+  public function javaSonarViolationAttributes() {
+    $violation = $this->newJavaStdClassViolation();
+    $sonarViolation = new SonarViolation($this->sonarQubeClient, $violation);
+
+    assertThat($this->sonarViolation->getId(), equalTo($violation->key));
+    assertThat($this->sonarViolation->getLineNumber(), equalTo($violation->line));
+    assertThat($this->sonarViolation->getFileFullKey(), equalTo($violation->component));
+  }
+
   private function newJavaStdClassViolation() {
-      $violationRule = (object) array(
-          'key' => "pmd:UnusedLocalVariable",
-          'name' => "Unused local variable"
+    $violation = (object) array(
+         "key" => "d9b00605-324b-4cf5-9e18-37d478d9d645",
+         "component" => "com.bom.be:bss-media-comments-core:src/main/java/com/bom/be/core/util/JaxbWrapper.java",
+         "componentId" => 20880,
+         "project" => "com.bom.be:bss-media-comments",
+         "rule" => "squid:AvoidContinueStatement",
+         "status" => "CLOSED",
+         "resolution" => "REMOVED",
+         "severity" => "MAJOR",
+         "message" => "The 'continue' branching statement prevent refactoring the source code to reduce the complexity.",
+         "line" => 236,
+         "creationDate" => "2014-12-02T10:14:54+0000",
+         "updateDate" => "2015-01-07T14:05:05+0000",
+         "fUpdateAge" => "4 months",
+         "closeDate" => "2015-01-07T14:05:05+0000"
       );
-
-      $violationResource = (object) array(
-          'key' => "com.bom.fe:tagPages-webservice:com.bom.fe.tagpages.TagPagesController",
-          'name' => 'TagPagesController',
-          'scope' => 'FIL',
-          'qualifier' => 'CLA',
-          'language' => 'java'
-      );
-
-      $violation = (object) array(
-          'id' => 22970858,
-          'message' => "Avoid unused local variables such as 'fakeVarToTriggerViolation'.",
-          'line' => 61,
-          'priority' => 'MAJOR',
-          'createdAt' => '2014-01-15T11:07:27+0100',
-          'rule' => $violationRule,
-          'resource' => $violationResource);
       return $violation;
   }
 
