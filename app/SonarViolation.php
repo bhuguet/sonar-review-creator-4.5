@@ -4,8 +4,6 @@ class SonarViolation {
   
   private $id;
   private $lineNumber;
-  private $fileName;
-  private $language;
   private $fileFullKey;
   
   private $fileNameFullPath;
@@ -17,19 +15,17 @@ class SonarViolation {
   public function __construct($sonarQubeClient, $violation) {
     $this->sonarQubeClient = $sonarQubeClient;
     
-    $this->id = $violation->id;
+    $this->id = $violation->key;
     $this->lineNumber = $violation->line;
-    $violationResource = $violation->resource;
-    $this->fileFullKey = $violationResource->key;    
-    $this->fileName = $violationResource->name;
-    $this->language = $violationResource->language;
+    $this->fileFullKey = $violation->component;    
     
     $this->ldapUserAliasesMatcher = new LdapUserAliasesMatcher();
   }
   
   public function computeFileNameFullPath($sourceDirectory) {
     $this->changeToDirectory($sourceDirectory);
-    $pattern = $this->language == 'php' ? array_pop(explode(':', $this->fileFullKey)) : $this->fileName .'.'. $this->language;
+    $explodedKey = explode(':', $this->fileFullKey);
+    $pattern = array_pop($explodedKey);
     $findResults = $this->find('.', $pattern);
     $firstResult = $findResults[0];
     echo "\nFound file $firstResult";
@@ -134,14 +130,6 @@ class SonarViolation {
   
   public function getLineNumber() {
     return $this->lineNumber;
-  }
-  
-  public function getFileName() {
-    return $this->fileName;
-  }
-  
-  public function getLanguage() {
-    return $this->language;
   }
   
   public function getFileFullKey() {

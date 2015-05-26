@@ -15,35 +15,27 @@ class SonarViolationTest extends PHPUnit_Framework_TestCase {
   /** @test */
   public function sonarViolationAttributes() {
     $violation = $this->phpStdClassViolation;
-    assertThat($this->sonarViolation->getId(), equalTo($violation->id));
+    assertThat($this->sonarViolation->getId(), equalTo($violation->key));
     assertThat($this->sonarViolation->getLineNumber(), equalTo($violation->line));
-    assertThat($this->sonarViolation->getFileName(), equalTo($violation->resource->name));
-    assertThat($this->sonarViolation->getFileFullKey(), equalTo($violation->resource->key));
-    assertThat($this->sonarViolation->getLanguage(), equalTo($violation->resource->language));
+    assertThat($this->sonarViolation->getFileFullKey(), equalTo($violation->component));
   }
   
   private function newPhpStdClassViolation() {
-    $violationRule = (object) array(
-        'key' => 'phppmd_rules:Code Size Rules/NPathComplexity',
-        'name' => 'Class NPath Complexity exceeds maximum'
-    );
-    
-    $violationResource = (object) array(
-        'key' => 'com.tomslabs.tools:sonar-review-creator:modules/thirdParty/actions/components.class.php',
-        'name' => 'components.class.php',
-        'scope' => 'FIL',
-        'qualifier' => 'FIL',
-        'language' => 'php'
-    );
-    
     $violation = (object) array(
-        'id' => 22978143, 
-        'message' => 'The method defineGuaVariables() has an NPath complexity of 15625. The configured NPath complexity threshold is 200.',
-        'line' => 251,
-        'priority' => 'CRITICAL',
-        'createdAt' => '2014-01-10T11:07:27+0100',
-        'rule' => $violationRule,
-        'resource' => $violationResource);    
+         "key" => "7de73395-b8ed-4b76-abf6-f039ed647caf",
+         "component" => "com.tomslabs.tools:sonar-review-creator:User/UserClientService.php",
+         "componentId" => 24485,
+         "project" => "com.tomslabs.tools:sonar-review-creator",
+         "rule" => "php:S1788",
+         "status" => "OPEN",
+         "severity" => "CRITICAL",
+         "message" => "Move arguments serviceConfig after arguments without default value",
+         "line" => 40,
+         "debt" => "20min",
+         "creationDate" => "2015-05-20T12:06:12+0000",
+         "updateDate" => "2015-05-20T12:06:12+0000",
+         "fUpdateAge" => "a day"
+    );
     return $violation;
   }
 
