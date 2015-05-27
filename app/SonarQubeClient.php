@@ -16,7 +16,7 @@ class SonarQubeClient {
     $url = $this->buildGetViolationsUrl($project, $severities);
     echo "\ngetViolations($project, $severities)\n";
     echo $url;
-    return json_decode($this->executeGet($url), true);
+    return json_decode($this->executeGet($url));
   }
   
   public function buildGetViolationsUrl($project, $severities) {

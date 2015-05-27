@@ -40,8 +40,8 @@ class SonarReviewCreator {
   public function run() {
     echo "\nRunning SonarReviewCreator for project " . $this->project . ". Scanning $this->nbDaysBackward days back..\n";
 
-    $violations = $this->sonarQubeClient->getViolations($this->project, $this->priorities);
-    $nbViolations = $violations["paging"]["total"];
+    $projectViolations = $this->sonarQubeClient->getViolations($this->project, $this->priorities);
+    $nbViolations = $projectViolations->paging->total;
     echo "\n\nFound $nbViolations eligible violations for review creation..\n";
     if ($nbViolations == 0) {
       exit(1);
@@ -52,8 +52,10 @@ class SonarReviewCreator {
     $nbOfReviewsCreated = 0;
     $nbViolationsCreatedAfterLimitDate = 0;
 
+    $violations = $projectViolations->issues;
+
     foreach ($violations as $violation) {
-      if($this->violationWasCreatedAfterTheGivenDate($createdAfterLimitDate, $violation->createdAt)) {
+      if($this->violationWasCreatedAfterTheGivenDate($createdAfterLimitDate, $violation->creationDate)) {
         $nbViolationsCreatedAfterLimitDate = $nbViolationsCreatedAfterLimitDate + 1;
         $sonarViolation = $this->newViolation($violation);
         $sonarViolation->computeFileNameFullPath($this->sourceDirectory);

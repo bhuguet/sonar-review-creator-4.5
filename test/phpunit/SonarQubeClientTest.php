@@ -34,15 +34,15 @@ class SonarQubeClientTest extends PHPUnit_Framework_TestCase {
     $sonarQubeClient = $this->mockSonarQubeClient();
     $violations = $sonarQubeClient->getViolations($this->project, $this->severities);
     
-    $firstViolation = $violations['issues'][13];
+    $firstViolation = $violations->issues[13];
     
-    $violationLineNumber = $firstViolation['line'];
-    $violatedFile = $firstViolation['component'];
+    $violationLineNumber = $firstViolation->line;
+    $violatedFile = $firstViolation->component;
     
     $explodeViolatedFile = explode(':', $violatedFile);
     $violatedFullFilePath = array_pop($explodeViolatedFile);
     
-    assertThat($violations["paging"]["total"], equalTo(14));
+    assertThat($violations->paging->total, equalTo(14));
     assertThat($violationLineNumber, equalTo(71));
     assertThat($violatedFile, equalTo("com.tomslabs.tools:sonar-review-creator:karma.conf.js"));
     assertThat($violatedFullFilePath, equalTo("karma.conf.js"));
@@ -52,7 +52,7 @@ class SonarQubeClientTest extends PHPUnit_Framework_TestCase {
     $sonarQubeClient = $this->getMock('SonarQubeClient', array('getViolations'), array($this->sonarHost, $this->assignerUsername, $this->assignerPassword), '', true);
     $sonarQubeClient->expects($this->any())
                     ->method('getViolations')
-                    ->will($this->returnValue(json_decode($this->projectViolationsJson, true)));    
+                    ->will($this->returnValue(json_decode($this->projectViolationsJson)));    
     return $sonarQubeClient;
   }
   
